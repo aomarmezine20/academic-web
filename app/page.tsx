@@ -126,7 +126,7 @@ export default function Home() {
                     Titre de l&apos;événement {item}
                   </h3>
                   <p className="text-text-secondary text-sm mb-4">
-                    Description courte de l'événement ou de l'actualité importante...
+                    Description courte de l&apos;événement ou de l&apos;actualité importante...
                   </p>
                   <a href="#" className="text-accent-primary hover:text-accent-secondary font-semibold text-sm">
                     Lire plus →
@@ -145,7 +145,7 @@ export default function Home() {
             Devenir Membre
           </h2>
           <p className="text-xl mb-8 text-white/90">
-            Rejoignez notre réseau de chercheurs, experts et praticiens engagés dans l'excellence académique
+            Rejoignez notre réseau de chercheurs, experts et praticiens engagés dans l&apos;excellence académique
           </p>
           <a href="/accueil/adhesion" className="inline-block bg-white text-accent-primary px-8 py-3 rounded-lg font-semibold hover:bg-surface transitions-smooth">
             Savoir Comment S&apos;Adhérer
