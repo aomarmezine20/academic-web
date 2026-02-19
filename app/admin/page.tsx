@@ -187,9 +187,6 @@ export default function AdminDashboard() {
     </div>
   );
 }
-  const [videoUrl, setVideoUrl] = useState('')
-
-  const handleLogin = (e: React.FormEvent) => {
     e.preventDefault()
     if (password === process.env.NEXT_PUBLIC_ADMIN_PASSWORD) {
       setIsLoggedIn(true)
