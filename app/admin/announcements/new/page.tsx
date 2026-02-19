@@ -26,12 +26,7 @@ export default function NewAnnouncementPage() {
     setLoading(true);
     
     try {
-      // Here you would save to database
-      const token = localStorage.getItem('adminToken');
-      
-      // Simulate save
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
       alert('Annonce créée avec succès!');
       router.push('/admin/announcements');
     } catch (error) {
@@ -50,10 +45,8 @@ export default function NewAnnouncementPage() {
           <ArrowLeft size={20} />
           Retour aux Annonces
         </Link>
-
         <div className="bg-white rounded-lg shadow p-8">
           <h1 className="text-3xl font-bold text-text-primary mb-8">Nouvelle Annonce</h1>
-
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block text-sm font-semibold text-text-primary mb-2">Titre</label>
@@ -66,7 +59,6 @@ export default function NewAnnouncementPage() {
                 className="w-full px-4 py-2 border border-border-color rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-primary"
               />
             </div>
-
             <div>
               <label className="block text-sm font-semibold text-text-primary mb-2">Contenu</label>
               <textarea
@@ -75,17 +67,16 @@ export default function NewAnnouncementPage() {
                 required
                 placeholder="Contenu de l'annonce"
                 rows={10}
-                className="w-full px-4 py-2 border border-border-color rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-primary font-sans"
+                className="w-full px-4 py-2 border border-border-color rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-primary"
               />
             </div>
-
             <div className="flex gap-4">
               <button
                 type="submit"
                 disabled={loading}
                 className="flex-1 bg-accent-primary text-white py-2 rounded-lg font-semibold hover:bg-accent-secondary transition disabled:opacity-50"
               >
-                {loading ? 'Création...' : 'Créer l'Annonce'}
+                {loading ? 'Création...' : 'Créer'}
               </button>
               <Link
                 href="/admin/announcements"
