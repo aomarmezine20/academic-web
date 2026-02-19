@@ -187,17 +187,6 @@ export default function AdminDashboard() {
     </div>
   );
 }
-
-  // Data states
-  const [articles, setArticles] = useState<Article[]>([])
-  const [events, setEvents] = useState<Event[]>([])
-  const [publications, setPublications] = useState<Publication[]>([])
-
-  // Form states
-  const [articleForm, setArticleForm] = useState({ title: '', content: '' })
-  const [eventForm, setEventForm] = useState({ title: '', description: '', date: '' })
-  const [publicationForm, setPublicationForm] = useState({ title: '', description: '', file: null as File | null })
-  const [imageFile, setImageFile] = useState<File | null>(null)
   const [videoUrl, setVideoUrl] = useState('')
 
   const handleLogin = (e: React.FormEvent) => {
