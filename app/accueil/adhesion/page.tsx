@@ -64,14 +64,14 @@ export default function Adhesion() {
 
         <div className="bg-gradient-to-r from-accent-primary to-accent-secondary text-white rounded-lg p-8 text-center my-12">
           <h2 className="text-2xl font-bold mb-4">Prêt à Rejoindre Notre Réseau?</h2>
-          <p className="mb-6">Remplissez le formulaire d'adhésion et devenez member de notre communauté académique</p>
+          <p className="mb-6">Remplissez le formulaire d&apos;adhésion et devenez member de notre communauté académique</p>
           <a href="/contact" className="inline-block bg-white text-accent-primary px-8 py-3 rounded-lg font-semibold hover:bg-surface transitions-smooth">
             Formulaire d'Adhésion
           </a>
         </div>
 
         <div className="bg-surface border border-border-color rounded-lg p-6">
-          <h2 className="text-2xl font-bold text-text-primary mb-4">Processus d'Adhésion</h2>
+          <h2 className="text-2xl font-bold text-text-primary mb-4">Processus d&apos;Adhésion</h2>
           <div className="space-y-4">
             <div className="flex items-start gap-4">
               <div className="bg-accent-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">1</div>
@@ -91,7 +91,7 @@ export default function Adhesion() {
               <div className="bg-accent-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">3</div>
               <div>
                 <h3 className="font-semibold text-text-primary">Confirmation</h3>
-                <p className="text-text-secondary">Vous recevrez une confirmation d'adhésion</p>
+                <p className="text-text-secondary">Vous recevrez une confirmation d&apos;adhésion</p>
               </div>
             </div>
           </div>

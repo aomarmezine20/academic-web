@@ -8,7 +8,7 @@ export default function QuiSommesNous() {
         
         <div className="prose-lg text-text-secondary space-y-6">
           <p>
-            Le Réseau Collectif d'Études Économiques et Management (RCEME) est une plateforme académique dédiée à l'excellence en recherche et à l'innovation scientifique dans les domaines de l'économie et du management.
+            Le Réseau Collectif d&apos;Études Économiques et Management (RCEME) est une plateforme académique dédiée à l&apos;excellence en recherche et à l&apos;innovation scientifique dans les domaines de l&apos;économie et du management.
           </p>
           
           <h2 className="text-2xl font-bold text-text-primary mt-8">Notre Mission</h2>
@@ -18,7 +18,7 @@ export default function QuiSommesNous() {
 
           <h2 className="text-2xl font-bold text-text-primary mt-8">Notre Vision</h2>
           <p>
-            Devenir un centre d'excellence reconnu à l'échelle nationale et internationale pour la production de connaissances pertinentes et applicables en économie et management.
+            Devenir un centre d&apos;excellence reconnu à l&apos;échelle nationale et internationale pour la production de connaissances pertinentes et applicables en économie et management.
           </p>
 
           <h2 className="text-2xl font-bold text-text-primary mt-8">Nos Valeurs</h2>

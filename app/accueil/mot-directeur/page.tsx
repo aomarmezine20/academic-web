@@ -8,7 +8,7 @@ export default function MotDirecteur() {
         
         <div className="bg-surface border border-border-color rounded-lg p-8 my-8">
           <p className="text-lg text-text-secondary italic mb-4 leading-relaxed">
-            "Bienvenue au sein du Réseau Collectif d'Études Économiques et Management. Nous sommes fiers de maintenir une plateforme où l'excellence académique rencontre l'innovation appliquée. À travers nos publications, événements et formations, nous contribuons activement à l'avancement de la connaissance et au développement professionnel de nos membres."
+            "Bienvenue au sein du Réseau Collectif d&apos;Études Économiques et Management. Nous sommes fiers de maintenir une plateforme où l&apos;excellence académique rencontre l&apos;innovation appliquée. À travers nos publications, événements et formations, nous contribuons activement à l&apos;avancement de la connaissance et au développement professionnel de nos membres."
           </p>
           <p className="font-semibold text-text-primary">
             Directeur du Réseau<br/>

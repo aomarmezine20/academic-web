@@ -7,7 +7,7 @@ export default function Home() {
       <section className="bg-gradient-to-r from-accent-primary to-accent-secondary text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
-            Réseau Collectif d'Études Économiques et Management
+            Réseau Collectif d&apos;Études Économiques et Management
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8">
             Plateforme de recherche, publications et événements scientifiques de haut niveau
@@ -55,7 +55,7 @@ export default function Home() {
                 Événements Scientifiques
               </h3>
               <p className="text-text-secondary mb-4">
-                Colloques, séminaires, journées d'étude et webinaires de niveau international
+                Colloques, séminaires, journées d&apos;étude et webinaires de niveau international
               </p>
               <a href="/evenements" className="text-accent-primary hover:text-accent-secondary font-semibold">
                 Découvrir →

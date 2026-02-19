@@ -34,7 +34,7 @@ export default function Colloques() {
         </div>
 
         <div className="mt-12 bg-accent-light border border-accent-primary rounded-lg p-6 text-center">
-          <p className="text-accent-primary font-semibold">Pour plus d'informations: contact@rceme.org</p>
+          <p className="text-accent-primary font-semibold">Pour plus d&apos;informations: contact@rceme.org</p>
         </div>
       </section>
     </div>

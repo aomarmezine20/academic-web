@@ -5,7 +5,7 @@ export default function Evenements() {
     <div className="bg-white">
       <section className="max-w-6xl mx-auto px-4 py-12">
         <h1 className="text-5xl font-bold text-accent-primary mb-4">Événements Scientifiques</h1>
-        <p className="text-xl text-text-secondary mb-12">Découvrez nos colloques, séminaires, journées d'étude et webinaires</p>
+        <p className="text-xl text-text-secondary mb-12">Découvrez nos colloques, séminaires, journées d&apos;étude et webinaires</p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {/* Event Types */}
@@ -20,7 +20,7 @@ export default function Evenements() {
           </div>
 
           <div className="bg-surface border border-border-color rounded-lg p-6 hover:shadow-hover transitions-smooth">
-            <h2 className="text-2xl font-bold text-accent-primary mb-4">Journées d'Étude</h2>
+            <h2 className="text-2xl font-bold text-accent-primary mb-4">Journées d&apos;Étude</h2>
             <p className="text-text-secondary mb-4">
               Événements thématiques approfondis, moins formels que les colloques, favorisant l'échange et le dialogue.
             </p>
@@ -32,7 +32,7 @@ export default function Evenements() {
           <div className="bg-surface border border-border-color rounded-lg p-6 hover:shadow-hover transitions-smooth">
             <h2 className="text-2xl font-bold text-accent-primary mb-4">Séminaires Doctoraux</h2>
             <p className="text-text-secondary mb-4">
-              Espace dédié à la formation et au développement des doctorants, avec présentations et retours d'experts.
+              Espace dédié à la formation et au développement des doctorants, avec présentations et retours d&apos;experts.
             </p>
             <a href="/evenements/seminaires" className="text-accent-primary font-semibold hover:text-accent-secondary">
               En Savoir Plus →

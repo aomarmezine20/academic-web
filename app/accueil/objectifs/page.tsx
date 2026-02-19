@@ -38,7 +38,7 @@ export default function Objectifs() {
               </div>
               <div className="p-4 bg-accent-light rounded">
                 <h3 className="font-semibold text-accent-primary mb-2">Management Stratégique</h3>
-                <p className="text-sm text-text-secondary">Gouvernance et stratégie d'entreprise</p>
+                <p className="text-sm text-text-secondary">Gouvernance et stratégie d&apos;entreprise</p>
               </div>
               <div className="p-4 bg-accent-light rounded">
                 <h3 className="font-semibold text-accent-primary mb-2">Entrepreneuriat & Innovation</h3>
