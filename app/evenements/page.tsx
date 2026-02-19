@@ -22,7 +22,7 @@ export default function Evenements() {
           <div className="bg-surface border border-border-color rounded-lg p-6 hover:shadow-hover transitions-smooth">
             <h2 className="text-2xl font-bold text-accent-primary mb-4">Journées d&apos;Étude</h2>
             <p className="text-text-secondary mb-4">
-              Événements thématiques approfondis, moins formels que les colloques, favorisant l'échange et le dialogue.
+              Événements thématiques approfondis, moins formels que les colloques, favorisant l&apos;échange et le dialogue.
             </p>
             <a href="/evenements/journees" className="text-accent-primary font-semibold hover:text-accent-secondary">
               En Savoir Plus →

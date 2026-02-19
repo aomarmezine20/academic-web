@@ -28,7 +28,7 @@ export default function Colloques() {
             <li>Durée: Généralement 2-3 jours</li>
             <li>Format: Présentations, tables rondes, discussions</li>
             <li>Public: Chercheurs, académiques, praticiens</li>
-            <li>Inscription: Obligatoire (gratuit ou payant selon l'événement)</li>
+            <li>Inscription: Obligatoire (gratuit ou payant selon l&apos;événement)</li>
             <li>Publications: Sélection des meilleures communications en revue</li>
           </ul>
         </div>

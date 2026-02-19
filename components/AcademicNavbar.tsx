@@ -92,7 +92,7 @@ export default function AcademicNavbar() {
               RCEME
             </div>
             <div className="ml-2 text-xs text-text-muted max-w-xs">
-              Réseau Collectif d'Études Économiques et Management
+              Réseau Collectif d&apos;Études Économiques et Management
             </div>
           </Link>
 

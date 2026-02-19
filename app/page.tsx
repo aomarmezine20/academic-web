@@ -94,7 +94,7 @@ export default function Home() {
                 Partenariats
               </h3>
               <p className="text-text-secondary mb-4">
-                Collaborations universitaires, publiques et privées à l'échelle nationale et internationale
+                Collaborations universitaires, publiques et privées à l&apos;échelle nationale et internationale
               </p>
               <a href="/partenariats" className="text-accent-primary hover:text-accent-secondary font-semibold">
                 Découvrir →
@@ -123,7 +123,7 @@ export default function Home() {
                 <div className="p-6">
                   <p className="text-sm text-text-muted mb-2">Février 2026</p>
                   <h3 className="text-lg font-semibold text-text-primary mb-3">
-                    Titre de l'événement {item}
+                    Titre de l&apos;événement {item}
                   </h3>
                   <p className="text-text-secondary text-sm mb-4">
                     Description courte de l'événement ou de l'actualité importante...
@@ -148,7 +148,7 @@ export default function Home() {
             Rejoignez notre réseau de chercheurs, experts et praticiens engagés dans l'excellence académique
           </p>
           <a href="/accueil/adhesion" className="inline-block bg-white text-accent-primary px-8 py-3 rounded-lg font-semibold hover:bg-surface transitions-smooth">
-            Savoir Comment S'Adhérer
+            Savoir Comment S&apos;Adhérer
           </a>
         </div>
       </section>

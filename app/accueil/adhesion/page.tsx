@@ -35,7 +35,7 @@ export default function Adhesion() {
 
           {/* Benefits */}
           <div className="bg-accent-light border border-accent-primary rounded-lg p-6">
-            <h2 className="text-2xl font-bold text-accent-primary mb-6">Avantages de l'Adhésion</h2>
+            <h2 className="text-2xl font-bold text-accent-primary mb-6">Avantages de l&apos;Adhésion</h2>
             
             <ul className="space-y-3">
               <li className="flex items-center gap-2">
@@ -66,7 +66,7 @@ export default function Adhesion() {
           <h2 className="text-2xl font-bold mb-4">Prêt à Rejoindre Notre Réseau?</h2>
           <p className="mb-6">Remplissez le formulaire d&apos;adhésion et devenez member de notre communauté académique</p>
           <a href="/contact" className="inline-block bg-white text-accent-primary px-8 py-3 rounded-lg font-semibold hover:bg-surface transitions-smooth">
-            Formulaire d'Adhésion
+            Formulaire d&apos;Adhésion
           </a>
         </div>
 
