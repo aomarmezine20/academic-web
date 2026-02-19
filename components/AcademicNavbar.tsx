@@ -121,6 +121,14 @@ export default function AcademicNavbar() {
             ))}
           </div>
 
+          {/* Admin Login Button */}
+          <Link
+            href="/login"
+            className="hidden lg:inline-block ml-8 px-4 py-2 bg-accent-primary text-white rounded-lg font-medium hover:bg-accent-secondary transitions-smooth"
+          >
+            Admin
+          </Link>
+
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -158,6 +166,13 @@ export default function AcademicNavbar() {
                 )}
               </div>
             ))}
+            <Link
+              href="/login"
+              className="block px-3 py-2 rounded-md text-base font-medium text-white bg-accent-primary hover:bg-accent-secondary transitions-smooth"
+              onClick={() => setMobileOpen(false)}
+            >
+              Admin
+            </Link>
           </div>
         )}
       </div>
