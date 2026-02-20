@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import { Image, Video, Play } from 'lucide-react'
+import { Image as ImageIcon, Video as VideoIcon, Play as PlayIcon } from 'lucide-react'
 
 export default function Mediatheque() {
   // Placeholder data - in real app, fetch from Supabase
@@ -23,14 +23,14 @@ export default function Mediatheque() {
         {/* Galeries Photos */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-primary mb-8 flex items-center">
-            <Image className="w-8 h-8 mr-3" aria-hidden="true" />
+            <ImageIcon className="w-8 h-8 mr-3" aria-hidden="true" />
             Galeries Photos
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {photos.map((photo) => (
               <div key={photo.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
                 <div className="h-48 bg-gray-200 flex items-center justify-center">
-                  <Image className="w-12 h-12 text-gray-400" aria-hidden="true" />
+                  <ImageIcon className="w-12 h-12 text-gray-400" aria-hidden="true" />
                 </div>
                 <div className="p-4">
                   <h3 className="font-semibold text-primary">{photo.title}</h3>
@@ -43,7 +43,7 @@ export default function Mediatheque() {
         {/* Archives Vidéo */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-primary mb-8 flex items-center">
-            <Video className="w-8 h-8 mr-3" aria-hidden="true" />
+            <VideoIcon className="w-8 h-8 mr-3" aria-hidden="true" />
             Archives Vidéo
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -78,7 +78,7 @@ export default function Mediatheque() {
                 <h3 className="font-semibold text-primary mb-2">Reportage Colloque 2024</h3>
                 <p className="text-sm text-gray-600 mb-3">Couverture complète de notre colloque annuel</p>
                 <button className="text-accent hover:underline flex items-center">
-                  <Play className="w-4 h-4 mr-2" />
+                  <PlayIcon className="w-4 h-4 mr-2" />
                   Voir le reportage
                 </button>
               </div>
@@ -86,7 +86,7 @@ export default function Mediatheque() {
                 <h3 className="font-semibold text-primary mb-2">Interview Experts</h3>
                 <p className="text-sm text-gray-600 mb-3">Entretiens avec nos chercheurs</p>
                 <button className="text-accent hover:underline flex items-center">
-                  <Play className="w-4 h-4 mr-2" />
+                  <PlayIcon className="w-4 h-4 mr-2" />
                   Voir l'interview
                 </button>
               </div>
