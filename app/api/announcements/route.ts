@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { query } from '../../../lib/db'
 import { isAdminAuthenticated } from '../../../lib/auth'
 
 export async function GET() {
   try {
+    const { query } = await import('../../../lib/db')
     const res = await query('SELECT * FROM announcements ORDER BY created_at DESC')
     return NextResponse.json(res.rows)
   } catch (error) {
@@ -26,6 +26,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Missing title or content' }, { status: 400 })
     }
 
+    const { query } = await import('../../../lib/db')
     const res = await query(
       'INSERT INTO announcements (title, content) VALUES ($1, $2) RETURNING *',
       [title, content]
