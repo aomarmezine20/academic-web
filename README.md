@@ -187,6 +187,31 @@ CREATE TABLE publications (
    ```
 4. Deploy with one click
 
+### Deploying to Vercel (detailed)
+
+1. Push the repository to GitHub (this project is already pushed).
+2. In your Vercel project settings, add the following Environment Variables:
+  - `DATABASE_URL` — your Postgres connection string (Vercel Postgres or external)
+  - `BLOB_READ_WRITE_TOKEN` — (optional) Vercel Blob write token for file uploads
+  - `NEXT_PUBLIC_ADMIN_PASSWORD` — admin password for the dashboard (defaults to `admin123` if not set)
+3. Option A — let Vercel deploy automatically from the `main` branch. If you prefer migrations to run automatically before visitors hit the application, use GitHub Actions (see next step).
+4. Option B — configure GitHub Actions to run migrations on push to `main`. This repo includes a workflow at `.github/workflows/migrate.yml` that runs `npm ci` and then `npm run migrate`. For that workflow to run successfully, add `DATABASE_URL` as a GitHub Secret (Repository Settings → Secrets → Actions).
+5. After environment variables and secrets are configured, Vercel will build and deploy the app. If you need to run migrations manually on your server, you can run locally:
+
+```powershell
+$env:DATABASE_URL = "postgres://user:pass@host:5432/db"
+npm ci
+npm run migrate
+```
+
+6. Visit your production domain and log in at `/login` to access the admin dashboard.
+
+### Notes about production readiness
+- The current admin login flow stores a simple token in localStorage; for production, replace this with a secure session solution (NextAuth.js, server sessions, or proper JWT verification).
+- Make sure `DATABASE_URL` is set in both GitHub Secrets (if you run migrations via Actions) and Vercel Environment Variables (for runtime DB access).
+- File uploads rely on Vercel Blob and require `BLOB_READ_WRITE_TOKEN`.
+
+
 ### Environment Variables
 
 Create `.env.local`:
