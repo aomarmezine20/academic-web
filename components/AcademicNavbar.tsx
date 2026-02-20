@@ -100,10 +100,13 @@ export default function AcademicNavbar() {
           <div className="hidden lg:flex items-center space-x-1">
             {sections.map((section) => (
               <div key={section.name} className="group relative">
-                <button className="px-3 py-2 rounded-md text-sm font-medium text-text-primary hover:text-accent-primary hover:bg-surface transitions-smooth">
+                <Link
+                  href={section.href}
+                  className="px-3 py-2 rounded-md text-sm font-medium text-text-primary hover:text-accent-primary hover:bg-surface transitions-smooth"
+                >
                   {section.href === '/' ? 'Accueil' : section.name}
-                </button>
-                
+                </Link>
+
                 {section.submenu && (
                   <div className="hidden group-hover:block absolute left-0 mt-0 w-48 bg-white border border-border-color shadow-card rounded-md py-2">
                     {section.submenu.map((item) => (

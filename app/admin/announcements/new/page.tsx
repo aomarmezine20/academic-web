@@ -24,6 +24,7 @@ export default function NewAnnouncementPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    let serverErrorMessage = '';
 
     try {
       const token = localStorage.getItem('adminToken')
@@ -39,14 +40,16 @@ export default function NewAnnouncementPage() {
       if (!res.ok) {
         const err = await res.json().catch(() => ({}))
         console.error('Create announcement error', err)
-        throw new Error(err.error || 'Failed to create')
+        serverErrorMessage = err.error || err.message || 'Failed to create'
+        throw new Error(serverErrorMessage)
       }
 
       alert('Annonce créée avec succès!')
       router.push('/admin/announcements')
     } catch (error) {
       console.error('Failed to create announcement', error)
-      alert('Erreur lors de la création')
+      const msg = serverErrorMessage || (error instanceof Error ? error.message : 'Erreur lors de la création')
+      alert(msg)
     } finally {
       setLoading(false)
     }
