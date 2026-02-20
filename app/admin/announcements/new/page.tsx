@@ -24,15 +24,31 @@ export default function NewAnnouncementPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
+
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      alert('Annonce créée avec succès!');
-      router.push('/admin/announcements');
+      const token = localStorage.getItem('adminToken')
+      const res = await fetch('/api/announcements', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-admin-token': token || '',
+        },
+        body: JSON.stringify({ title, content }),
+      })
+
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}))
+        console.error('Create announcement error', err)
+        throw new Error(err.error || 'Failed to create')
+      }
+
+      alert('Annonce créée avec succès!')
+      router.push('/admin/announcements')
     } catch (error) {
-      alert('Erreur lors de la création');
+      console.error('Failed to create announcement', error)
+      alert('Erreur lors de la création')
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
   };
 

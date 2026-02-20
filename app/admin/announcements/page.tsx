@@ -7,6 +7,8 @@ import { ArrowLeft, Plus } from 'lucide-react';
 
 export default function AnnouncementsPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [announcements, setAnnouncements] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
@@ -17,6 +19,26 @@ export default function AnnouncementsPage() {
       setIsAuthenticated(true);
     }
   }, [router]);
+
+  useEffect(() => {
+    if (!isAuthenticated) return;
+
+    const fetchAnnouncements = async () => {
+      setLoading(true);
+      try {
+        const res = await fetch('/api/announcements')
+        if (!res.ok) throw new Error('Failed to fetch')
+        const data = await res.json()
+        setAnnouncements(data || [])
+      } catch (err) {
+        console.error('Error fetching announcements', err)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchAnnouncements()
+  }, [isAuthenticated])
 
   if (!isAuthenticated) return null;
 
@@ -40,9 +62,25 @@ export default function AnnouncementsPage() {
             </Link>
           </div>
 
-          <div className="bg-surface rounded-lg p-6 text-center">
-            <p className="text-text-muted">Aucune annonce pour le moment.</p>
-            <p className="text-text-secondary text-sm mt-2">Cliquez sur &quot;Ajouter une Annonce&quot; pour commencer.</p>
+          <div className="bg-surface rounded-lg p-6">
+            {loading ? (
+              <p className="text-text-muted">Chargement...</p>
+            ) : announcements.length === 0 ? (
+              <div className="text-center">
+                <p className="text-text-muted">Aucune annonce pour le moment.</p>
+                <p className="text-text-secondary text-sm mt-2">Cliquez sur &quot;Ajouter une Annonce&quot; pour commencer.</p>
+              </div>
+            ) : (
+              <ul className="space-y-4">
+                {announcements.map((a) => (
+                  <li key={a.id} className="p-4 bg-white rounded border">
+                    <h3 className="font-semibold text-text-primary">{a.title}</h3>
+                    <p className="text-text-muted text-sm mt-1">{new Date(a.created_at).toLocaleString()}</p>
+                    <p className="mt-2 text-text-secondary">{a.content}</p>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       </div>
